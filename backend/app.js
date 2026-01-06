@@ -21,7 +21,7 @@ router.post("/send/mail",async(req,res,next)=>{
     if(!name || !email || !message){
         return res.status(400).json({
         success: false,
-        message: "Please provide all details",
+        message: "Please provide all details.",
         });
     }
     try {
