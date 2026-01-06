@@ -16,7 +16,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const {data} = await axios.post(
-        "http://localhost:4000/send/mail",
+        `${import.meta.env.VITE_BACKEND_URL}/send/mail`,
         {
           name,email,message,
         },
@@ -31,31 +31,9 @@ const Contact = () => {
       toast.success(data.message);
       setLoading(false);
     } catch (error) {
-        toast.error(error.response.data.message);
+        toast.error(error?.response?.data?.message || "Something went wrong");
     }
   }
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!name || !email || !message) {
-      toast.error("Please fill all details before submitting");
-      return;
-    }
-
-    setLoading(true);
-    
-    setTimeout(() => {
-      setLoading(false);
-      toast.success("Message sent successfully!");
-
-      setName("");
-      setEmail("");
-      setMessage("");
-    }, 3000);
-  };
-
   return (
     <section className="contact" id="contact">
       <form onSubmit={sendEmail}>

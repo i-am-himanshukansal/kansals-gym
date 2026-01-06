@@ -14,7 +14,7 @@ import ScrollToHome from "./components/ScrollToHome";
   
 const App = () => {
   return (
-    <>
+    <>  
       <Navbar />
       <Hero />
       <WorkoutSessions />
