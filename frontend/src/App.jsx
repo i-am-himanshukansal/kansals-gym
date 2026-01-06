@@ -1,30 +1,37 @@
 import React from "react";
 
-const Navbar = () => {
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import WorkoutSessions from "./components/Workoutsessions";
+import Gallery from "./components/Gallery";
+import Pricing from "./components/Pricing";
+import Contact from "./components/Contact";
+import BMIcalculator from "./components/BMIcalculator";
+import Footer from "./components/Footer";
+import "./App.css";
+import { ToastContainer } from "react-toastify";
+import ScrollToHome from "./components/ScrollToHome";
+  
+const App = () => {
   return (
-    <header className="navbar">
-      {/* LEFT : Brand */}
-      <div className="logo">
-        <p>KANSAL&apos;s GYM</p>
-      </div>
-
-      {/* RIGHT : Navigation */}
-      <nav className="nav-links">
-        <button onClick={() => scrollToSection("hero")}>Home</button>
-        <button onClick={() => scrollToSection("workout_session")}>Workouts</button>
-        <button onClick={() => scrollToSection("gallery")}>Gallery</button>
-        <button onClick={() => scrollToSection("pricing")}>Pricing</button>
-        <button onClick={() => scrollToSection("contact")}>Contact</button>
-        <button onClick={() => scrollToSection("bmi")}>BMI</button>
-      </nav>
-    </header>
+    <>
+      <Navbar />
+      <Hero />
+      <WorkoutSessions />
+      <Gallery />
+      <Pricing />
+      <BMIcalculator />
+      <Contact />
+      <Footer />
+      <ScrollToHome/>
+      <ToastContainer
+        position="top-right" 
+        autoClose={3000}
+        hideProgressBar={false}
+        pauseOnHover
+        theme="light"/>
+    </>
   );
 };
 
-export default Navbar;
+export default App;
