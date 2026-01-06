@@ -21,6 +21,7 @@ const Contact = () => {
           name,email,message,
         },
         {
+          timeout: 15000, 
           withCredentials: true,
           headers : {"Content-Type": "application/json"}
         }
