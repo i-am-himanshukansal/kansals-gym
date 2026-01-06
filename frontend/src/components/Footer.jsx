@@ -1,6 +1,6 @@
 import React from "react";
 import details from "../../data/detailss.json";
-import "./footer.css";
+import "./Footer.css";
 
 import { IoMdMail } from "react-icons/io";
 import {
