@@ -1,0 +1,97 @@
+/* ===============================
+   Footer (Isolated & Safe)
+================================ */
+
+.footer {
+  background: #0b0f19;
+  padding: 60px 20px 25px;
+  color: #e5e7eb;
+}
+
+/* Layout */
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+/* Common Column Styling */
+.footer-brand,
+.footer-contact,
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Brand */
+.footer-brand h2 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.footer-brand span {
+  font-size: 13px;
+  color: #cbd5f5;
+}
+
+/* Section Headings */
+.footer-contact h3,
+.footer-socials h3 {
+  font-size: 16px;
+  color: #0095ff;
+  margin-bottom: 14px;
+}
+
+/* Links (Contact + Socials) */
+.footer-contact a,
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #cbd5f5;
+  text-decoration: none;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+/* Hover Effect */
+.footer-contact a:hover,
+.footer-socials a:hover {
+  color: #0095ff;
+  transform: translateX(4px);
+}
+
+/* Icons */
+.footer-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+  border-top: 1px solid #1f2933;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
