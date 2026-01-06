@@ -1,7 +1,7 @@
 import express from "express";
 import {config} from "dotenv";
 import cors from "cors"
-
+const PORT = process.env.PORT || 4000;
 import sendEmail from "./utils/sendEmail.js";
 
 const app = express();
@@ -52,5 +52,5 @@ router.get("/",(req,res,next)=>{
 })
 app.use("/",router)
 app.listen(process.env.PORT,()=>{
-    console.log(`SERVER STARTED AT ${process.env.PORT}`);
+    console.log(`SERVER STARTED AT ${PORT}`);
 })

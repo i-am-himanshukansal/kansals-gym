@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 import { ToastContainer } from "react-toastify";
 import ScrollToHome from "./components/ScrollToHome";
-  
+  // console.log("Backend URL:", import.meta.env.VITE_BACKEND_URL);
 const App = () => {
   return (
     <>  

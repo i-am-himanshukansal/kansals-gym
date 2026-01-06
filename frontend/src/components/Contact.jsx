@@ -21,7 +21,6 @@ const Contact = () => {
           name,email,message,
         },
         {
-          timeout: 15000, 
           withCredentials: true,
           headers : {"Content-Type": "application/json"}
         }
@@ -33,6 +32,7 @@ const Contact = () => {
       setLoading(false);
     } catch (error) {
         toast.error(error?.response?.data?.message || "Something went wrong");
+        setLoading(false);
     }
   }
   return (
