@@ -27,7 +27,7 @@ const BMIcalculator = () => {
     } else if (bmiValue < 25) {
       toast.success("You have a healthy weight");
     } else if (bmiValue < 30) {
-      toast.warning("You are overweight. Regular exercise is recommended.");
+      toast.warning("You are overweight.Regular exercise is recommended.");
     } else {
       toast.error(
         "You are in the obese range. It is recommended to seek advice from a healthcare specialist."
